@@ -6,7 +6,7 @@ The following contains implementation of the [Mini Project 1](https://karthikv13
 
 # List of Specifications:
 
-1.Display Requirement
+### Display Requirement:
 The shell prompt displays the username, system name, and current directory path. The format is: <Username@SystemName:~>
 
 Specification 2: Input Requirements
