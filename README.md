@@ -5,57 +5,76 @@ Amey Choudhary
 The following contains implementation of the [Mini Project 1](https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1).
 
 # List of Specifications:
+## Shell  Specifications
 
-### Display Requirement:
-The shell prompt displays the username, system name, and current directory path. The format is: <Username@SystemName:~>
+This document outlines the specifications for a shell program. The shell should meet the following requirements:
 
-### Input Requirements
-1. Supports ; and & separated list of commands.
-2. Handles random spaces and tabs in input.
-3. Commands separated by ; are executed sequentially.
-4. Commands followed by & are executed in the background, printing the process ID.
+**User Interface**
 
+* Display a prompt indicating the current working directory and username.
+* Parse user input for commands and arguments.
+* Handle `;` and `&` separated lists of commands.
+* Support random spaces and tabs in user input.
 
-### warp Command
-Changes the current working directory and prints the new path.
-Supports . (current directory), .. (parent directory), ~ (home directory), and - (previous directory) symbols.
-Executes multiple arguments sequentially.
-Example: <JohnDoe@SYS:~> warp test /home/johndoe/test
+**Built-in Commands**
 
+* `warp` - change directory
+    * Support absolute and relative paths, paths from the home directory, and multiple arguments.
+    * Change the prompt to reflect the new working directory.
+* `peek` - list files and directories
+    * Support `-a` (all files), `-l` (long listing), and `.` (current directory), `..` (parent directory), `~` (home directory), and `-` (previous directory) arguments.
+    * Display files in white, directories in blue, and executables in green.
+* `pastevents` - manage command history
+    * Store and display the 15 most recent commands.
+    * Ignore commands containing `pastevents`.
+    * Allow purging the history.
+    * Execute commands from the history.
+* `proclore` - display process information
+    * Show process ID, status, group, virtual memory, and executable path.
+* `seek` - search for files and directories
+    * Support `-d` (directories only), `-f` (files only), and `-e` (change directory or print content) flags.
+    * Handle flags and arguments.
 
-Specification 4: peek Command
-Lists files and directories in lexicographic order.
-Supports -a (all files, including hidden) and -l (detailed information) flags.
-Color-codes output: green for executables, white for files, blue for directories.
-Specification 5: pastevents Command
-Stores the 15 most recent command statements.
-pastevents purge clears all stored events.
-pastevents execute <index> executes the command at the specified index.
-Specification 6: System Commands
-Executes standard system commands in foreground or background.
-Prints the process name and duration if a foreground process takes more than 2 seconds.
-Specification 7: proclore Command
-Prints process information such as PID, status, process group, virtual memory, and executable path.
-Specification 8: seek Command
-Searches for files or directories in the specified directory.
-Supports -d (directories only), -f (files only), and -e (print or change directory if only one match found) flags.
-Specification 9: I/O Redirection
-Supports >, >>, and < for output and input redirection.
-Displays error if input file not found.
-Specification 10: Pipes
-Supports piping between commands.
-Specification 11: Redirection with Pipes
-Supports combining I/O redirection and pipes.
-Specification 13: Signals
-ping <pid> <signal_number> sends signals to processes.
-Handles Ctrl-C, Ctrl-D, and Ctrl-Z for signal management.
-Specification 14: fg and bg Commands
-fg <pid> brings a background process to foreground.
-bg <pid> changes a stopped background process to running.
-Specification 15: neonate Command
-Prints the PID of the most recently created process every specified seconds until 'x' is pressed.
-Specification 16: iMan Command
-Fetches man pages from the internet using sockets.
+**External Commands**
+
+* Execute system commands like `emacs` and `gedit` in foreground and background processes.
+* Print execution time for foreground processes taking more than 2 seconds.
+* Display background process PIDs and termination messages.
+
+**I/O Redirection**
+
+* Support `>` (overwrite), `>>` (append), and `<` (read from file) redirection operators.
+* Handle non-existent input files and create output files with appropriate permissions.
+
+**Pipes**
+
+* Connect multiple commands using pipes (`|`) to pass data between them.
+* Support any number of pipes.
+
+**Redirection with Pipes**
+
+* Combine I/O redirection with pipes.
+
+**Process Management**
+
+* List running foreground and background processes spawned by the shell.
+* Send signals to processes using `ping <pid> <signal_number>`.
+* Handle keyboard interrupts (Ctrl-C), logout (Ctrl-D), and backgrounding (Ctrl-Z).
+* Bring background processes to the foreground (`fg <pid>`) and vice versa (`bg <pid>`).
+
+**Other Features**
+
+* `neonate` - print the process ID of the most recently created process every n seconds until the user presses `x`.
+
+**Networking**
+
+* `iMan` - fetch man pages from a website and display them on the terminal.
+
+**General Requirements**
+
+* The shell should not use `execvp` or similar commands for specific functionalities.
+* Color coding should be used to differentiate between files, directories, and executables in output.
+
 
 # Steps to run the shell
 1. Clone the repository into your local system.
