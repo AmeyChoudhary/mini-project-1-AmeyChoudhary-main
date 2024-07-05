@@ -4,10 +4,9 @@ Amey Choudhary
 # Description
 The following contains implementation of the [Mini Project 1](https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1).
 
-# List of Specifications:
-## Shell  Specifications
+# Shell  Specifications
 
-This document outlines the specifications for a shell program. The shell should meet the following requirements:
+The shell meets the following requirements:
 
 **User Interface**
 
@@ -37,7 +36,7 @@ This document outlines the specifications for a shell program. The shell should 
 
 **External Commands**
 
-* Execute system commands like `emacs` and `gedit` in foreground and background processes.
+* Execute system commands like `emacs`, `sleep`, `echo`, `gedit` .etc. in foreground and background processes.
 * Print execution time for foreground processes taking more than 2 seconds.
 * Display background process PIDs and termination messages.
 
@@ -69,12 +68,6 @@ This document outlines the specifications for a shell program. The shell should 
 **Networking**
 
 * `iMan` - fetch man pages from a website and display them on the terminal.
-
-**General Requirements**
-
-* The shell should not use `execvp` or similar commands for specific functionalities.
-* Color coding should be used to differentiate between files, directories, and executables in output.
-
 
 # Steps to run the shell
 1. Clone the repository into your local system.
