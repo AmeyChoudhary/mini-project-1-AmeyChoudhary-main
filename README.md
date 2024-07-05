@@ -1,14 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/76mHqLr5)
 # OSN Mini Project 1
 Amey Choudhary
 
-2021113017
-
 # Description
-The following contains the part A of the Mini Project 1.
-
-# Disclaimer
-I have coded the entire codebase and used AI tools (ChatGPT and GitHub Copilot for assistance) for assistance in writing the code. I have tried to include their usage (if used) in comments.
+The following contains implementation of the [Mini Project 1](https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1).
 
 # Steps to run the shell
 1. Clone the repository into your local system.
