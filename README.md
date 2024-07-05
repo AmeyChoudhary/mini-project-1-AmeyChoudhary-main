@@ -9,16 +9,20 @@ The following contains implementation of the [Mini Project 1](https://karthikv13
 ### Display Requirement:
 The shell prompt displays the username, system name, and current directory path. The format is: <Username@SystemName:~>
 
-Specification 2: Input Requirements
-Supports ; and & separated list of commands.
-Handles random spaces and tabs in input.
-Commands separated by ; are executed sequentially.
-Commands followed by & are executed in the background, printing the process ID.
-Specification 3: warp Command
+### Input Requirements
+1. Supports ; and & separated list of commands.
+2. Handles random spaces and tabs in input.
+3. Commands separated by ; are executed sequentially.
+4. Commands followed by & are executed in the background, printing the process ID.
+
+
+### warp Command
 Changes the current working directory and prints the new path.
 Supports . (current directory), .. (parent directory), ~ (home directory), and - (previous directory) symbols.
 Executes multiple arguments sequentially.
 Example: <JohnDoe@SYS:~> warp test /home/johndoe/test
+
+
 Specification 4: peek Command
 Lists files and directories in lexicographic order.
 Supports -a (all files, including hidden) and -l (detailed information) flags.
