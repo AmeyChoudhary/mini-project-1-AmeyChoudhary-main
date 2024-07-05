@@ -1,4 +1,4 @@
-# OSN Mini Project 1
+# OSN Mini Project 1 (C shell)
 Amey Choudhary
 
 # Description
