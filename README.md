@@ -2,7 +2,7 @@
 Amey Choudhary
 
 # Description
-The following contains implementation of the [Mini Project 1](https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1). It is a custom shell, which supports user and system commands, piping and redirecting commands, process management and networking
+The following contains implementation of the [Mini Project 1](https://karthikv1392.github.io/cs3301_osn/mini-projects/mp1). It is a custom shell, built in C, which supports user and system commands, piping and redirecting commands, process management and networking
 
 # Shell  Specifications
 
