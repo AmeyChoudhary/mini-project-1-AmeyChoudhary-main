@@ -1,0 +1,24 @@
+sleep 100
+fg 453921
+activities
+sleep 100
+activities
+bg 455543
+activities
+fg 455543
+sleep 10 &
+fg 460331
+sleep 100
+fg 460698
+activities
+sleep 30
+activities
+
+
+
+
+
+s
+10
+s
+
